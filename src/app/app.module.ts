@@ -13,7 +13,7 @@ import { OfferActivityComponent } from './offer-activity/offer-activity.componen
 import { SearchActivityComponent } from './search-activity/search-activity.component';
 import {AngularFireModule} from 'angularfire2';
 import { environment } from 'src/environments/environment';
-import {AngularFireDatabadeModule} from 'angularfire2/database'
+import {AngularFireDatabaseModule} from 'angularfire2/database'
 // import { NgModule } from '@angular/core';
 
 @NgModule({
@@ -31,7 +31,7 @@ import {AngularFireDatabadeModule} from 'angularfire2/database'
     BrowserModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabadeModule,
+    AngularFireDatabaseModule,
     CommonModule, 
     HttpClientModule,
     RouterModule.forRoot([
