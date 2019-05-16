@@ -17,7 +17,7 @@ export class PostsComponent {
     http.get('http://jsonplaceholder.typicode.com/posts').subscribe(response =>
       {
         // console.log(response);
-        this.posts = response;
+        // this.posts = response;
       });
   }
 
@@ -28,7 +28,7 @@ export class PostsComponent {
     input.value = '';
     this.http.post('http://jsonplaceholder.typicode.com/posts', JSON.stringify(post)).subscribe(response =>
     {
-        post.id = response.id;
+        // post.id = response.id;
         this.posts.splice(0, 0, post);
    
     });
