@@ -11,8 +11,9 @@ import { RouterModule } from '@angular/router';
 import { ChooseComponent } from './choose/choose.component';
 import { OfferActivityComponent } from './offer-activity/offer-activity.component';
 import { SearchActivityComponent } from './search-activity/search-activity.component';
-
-
+import {AngularFireModule} from 'angularfire2';
+import { environment } from 'src/environments/environment';
+import {AngularFireDatabaseModule} from 'angularfire2/database'
 // import { NgModule } from '@angular/core';
 
 @NgModule({
@@ -29,6 +30,8 @@ import { SearchActivityComponent } from './search-activity/search-activity.compo
   imports: [
     BrowserModule,
     FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
     CommonModule, 
     HttpClientModule,
     RouterModule.forRoot([
